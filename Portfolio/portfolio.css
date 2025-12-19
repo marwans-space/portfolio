@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary: hsl(0, 0%, 5%);
+    --secondary: hsl(0, 0%, 15%);
+    --accent: hsl(200, 70%, 50%);
+    --accent-light: hsl(200, 70%, 70%);
+    --white: hsl(0, 0%, 100%);
+    --ff: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    font-family: var(--ff);
+    background-color: var(--primary);
+    line-height: 1.6;
+    color: var(--white);
+}
+a {
+    text-decoration: none;
+}
+header {
+    background: var(--secondary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    align-items: center;
+}
+ul {
+    list-style: none;
+}
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+nav ul li a {
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+nav ul li a:hover {
+    color: var(--accent);
+}
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+#welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+#welcome-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+#welcome-section p {
+    font-size: 0.5rem;
+    max-width: 600px;
+    margin-top: -20px;
+}
+#project-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary))
+}
+#project-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--white);
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.project-tile {
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.project-tile h3 {
+    margin-bottom: 1rem;
+}
+.project-tile a {
+    color: var(--white);
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+}
+.project-tile a:hover {
+    background: var(--secondary);
+    border: 1px solid var(--accent);
+    
+}
+#contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: var(--secondary); 
+}
+#contact ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+#contact ul li a {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    display:inline-block;
+}
+#contact ul li a:hover {
+    color: var(--accent);
+}
+@media (max-width: 600px) {
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+    #welcome-section h3 {
+        font-size: 1.2rem;
+    }
+    #project-section h2 {
+        font-size: 2rem;
+    }
+}
