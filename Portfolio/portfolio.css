@@ -58,6 +58,10 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--accent);
 }
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
 
 img {
     max-width: 400px;
@@ -76,7 +80,6 @@ img {
 
 #about {
     grid-area: 2 / 2 / 3 / 3;
-    margin-top: -5rem;
 }
 
 #about h2 {
@@ -107,13 +110,11 @@ img {
     font-size: 3rem;
     color: var(--accent);
     text-align: left;
-    margin-top: -1rem;
 }
 
 #name-and-position h3 {
     font-size: 1.5rem;
     text-align: left;
-    margin-top: -1rem;
 }
 
 #project-section {
